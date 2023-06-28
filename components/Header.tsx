@@ -22,7 +22,10 @@ function Header() {
       </div>
 
       <div className="flex divide-x text-gray-500 items-center text-xs md:text-base">
-        <Link href="#" className="px-2 font-light">
+        <Link
+          href="https://github.com/NeilMisra99/dalle-project"
+          className="px-2 font-light"
+        >
           Github Repo
         </Link>
       </div>
