@@ -23,7 +23,7 @@ function PromptInput() {
   });
 
   const submitPrompt = async (useSuggestion?: boolean) => {
-    const inputPrompt = input;
+    const inputPrompt = input.endsWith(".") ? input : input + ".";
     console.log(inputPrompt);
     setInput("");
 
