@@ -82,7 +82,13 @@ function PromptInput() {
             "Enter a prompt..."
           }
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) =>
+            setInput(
+              e.target.value.endsWith(".")
+                ? e.target.value
+                : e.target.value + "."
+            )
+          }
           className="flex-1 p-4 outline-none rounded-md"
         />
         <button
