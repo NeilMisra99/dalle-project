@@ -50,12 +50,16 @@ function Images() {
             <div className="absolute flex justify-center items-center w-full h-full bg-white opacity-0 hover:opacity-80 transition-opacity duration-200 z-10">
               <p className="text-center font-light text-lg p-5">
                 {/* This removes the Timestamp and File extension */}
-                {image.name
-                  .split("_")
-                  ?.toString()
-                  .split(".")
-                  .shift()
-                  ?.replaceAll(",", " ")}
+                {image.name.endsWith(".")
+                  ? image.name
+                      .split("_")
+                      ?.toString()
+                      .split(".")
+                      .shift()
+                      ?.replaceAll(",", " ")
+                  : image.name
+                      .slice(0, image.name.lastIndexOf("_"))
+                      .replaceAll("_", " ")}
               </p>
             </div>
             <Image
