@@ -50,7 +50,7 @@ function Images() {
             <div className="absolute flex justify-center items-center w-full h-full bg-white opacity-0 hover:opacity-80 transition-opacity duration-200 z-10">
               <p className="text-center font-light text-lg p-5">
                 {/* This removes the Timestamp and File extension */}
-                {image.name.split("_").shift()?.toString().split(".").shift()}
+                {image.name.split("_")?.toString().split(".").shift()}
               </p>
             </div>
             <Image
